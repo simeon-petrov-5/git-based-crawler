@@ -2,4 +2,7 @@
 export default defineNuxtConfig({
   target: "static",
   modules: ["nuxt-windicss"],
+  generate: {
+    fallback: true
+  }
 });
