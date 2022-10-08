@@ -1,0 +1,24 @@
+<script setup lang="ts">
+import crawlerConfig from "./crawler/config";
+import { ConfigEntry } from "./types/config";
+
+const configuration = crawlerConfig as unknown as ConfigEntry[];
+</script>
+
+<template>
+  <section class="max-w-screen-sm mx-auto mt-6 mb-12 text-center">
+    <h1 class="font-bold text-xl uppercase mb-6">Price tracker</h1>
+    <p>
+      This page is created to track the prices of couple of stuff I think of
+      buying and decided to track how the prices are changing over time,
+      especcially before Black Friday.
+    </p>
+  </section>
+  <section class="grid grid-cols-2 col-2 gap-4">
+    <DryerWidget
+      v-for="config in configuration"
+      :key="config.model"
+      :config="config"
+    />
+  </section>
+</template>
