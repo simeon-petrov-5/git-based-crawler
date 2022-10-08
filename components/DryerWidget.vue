@@ -30,10 +30,12 @@ const generateChartDatasets = () => {
   return datasets;
 };
 
-const chartData = {
-  labels: generateChartLabels(),
-  datasets: generateChartDatasets(),
-};
+const chartData = jsonData[props.config.model]
+  ? {
+      labels: generateChartLabels(),
+      datasets: generateChartDatasets(),
+    }
+  : null;
 </script>
 
 <template>
@@ -41,6 +43,7 @@ const chartData = {
     <h2 class="text-dark-600 text-lg mb-2 text-center">
       {{ props.config.model }}
     </h2>
-    <Chart :chartData="chartData" />
+    <Chart v-if="chartData" :chartData="chartData" />
+    <p v-else class="text-center italic text-gray-600">There's no saved data</p>
   </section>
 </template>

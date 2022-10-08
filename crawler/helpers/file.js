@@ -1,4 +1,5 @@
 import fs from 'fs';
+import configuration from "../config.js";
 const dataFilePath = './data/index.json'
 
 

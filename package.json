@@ -2,6 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "crawler":"node crawler/index.js",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import crawlerConfig from "./crawler/config";
-import { ConfigEntry } from "./types/config";
+import { Config } from "./types/config";
 
-const configuration = crawlerConfig as unknown as ConfigEntry[];
+const configuration = crawlerConfig as unknown as Config;
 </script>
 
 <template>
