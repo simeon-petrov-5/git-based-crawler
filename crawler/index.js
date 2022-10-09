@@ -1,18 +1,13 @@
 import * as cheerio from 'cheerio';
 import axios from "axios";
-import configuration, { WEBSITE } from "./config.js";
+import configuration, { HTMLSelectors } from "./config.js";
 import { readDataFile, updateDataFile, validateExistingData } from './helpers/file.js';
 import commitAndPush from './helpers/github.js';
 
-const cheerioSelectors = {
-  [WEBSITE.TECHNOPOLIS]: '.product-block .product-price .price .price-value',
-  [WEBSITE.TECHNOMIX]: '.catalog-product-view .product-top-area .product-info-main .product-info-price .price-box .final-price .price-container .price',
-  [WEBSITE.TECHMART]: '.product-detail-price-holder'
-};
 
 const getPriceWithCheerio = ({ htmlStr, website }) => {
   const $ = cheerio.load(htmlStr);
-  const price = $(cheerioSelectors[website]).text().replace(/\s/g, '').replace('лв.', '').replace(',', '.');
+  const price = $(HTMLSelectors[website]).text().replace(/\s/g, '').replace('лв.', '').replace(',', '.');
   return parseFloat(price, 10)
 }
 

@@ -1,1 +1,30 @@
-{"BOSCH-WTR87TW0BY":{"TECHNOPOLIS":[{"date":"2022-10-08T12:09:46.831Z","price":1379}],"TECHNOMIX":[{"date":"2022-10-08T12:09:47.802Z","price":1377}]},"AEG-T7DBE48S":{"TECHNOPOLIS":[{"date":"2022-10-08T12:09:48.659Z","price":1249}],"TECHNOMIX":[{"date":"2022-10-08T12:09:49.710Z","price":1299}]},"AEG-T8DBE48S":{"TECHNOPOLIS":[{"date":"2022-10-08T12:09:51.105Z","price":1399}],"TECHNOMIX":[{"date":"2022-10-08T12:09:52.119Z","price":1399}]},"MIELE-TWC560WP":{"TECHNOMIX":[{"date":"2022-10-08T12:09:52.971Z","price":null}]}}
+{
+  "BOSCH-WTR87TW0BY": {
+    "TECHNOPOLIS": [{ "date": "2022-10-09T19:40:25.569Z", "price": 1379 }],
+    "TECHNOMIX": [{ "date": "2022-10-09T19:40:25.899Z", "price": 1377 }]
+  },
+  "AEG-T7DBE48S": {
+    "TECHNOPOLIS": [{ "date": "2022-10-09T19:40:26.497Z", "price": 1249 }],
+    "TECHNOMIX": [{ "date": "2022-10-09T19:40:28.337Z", "price": 1299 }]
+  },
+  "AEG-T8DBE48S": {
+    "TECHNOPOLIS": [{ "date": "2022-10-09T19:40:29.164Z", "price": 1399 }],
+    "TECHNOMIX": [{ "date": "2022-10-09T19:40:29.471Z", "price": 1399 }]
+  },
+  "MIELE-TWC560WP": {
+    "TECHNOMIX": [{ "date": "2022-10-09T19:40:29.728Z", "price": 1990 }]
+  },
+  "DeLonghi-Dedica-EC-685": {
+    "EMAG": [{ "date": "2022-10-09T19:40:30.238Z", "price": 336.9917 }],
+    "TECHNOMIX": [{ "date": "2022-10-09T19:40:31.620Z", "price": 359 }],
+    "TECHNOPOLIS": [{ "date": "2022-10-09T19:40:32.501Z", "price": 349 }]
+  },
+  "Tefal-OptiGrill-GC706D34": {
+    "EMAG": [{ "date": "2022-10-09T19:40:33.077Z", "price": 259.0013 }],
+    "TECHNOMIX": [{ "date": "2022-10-09T19:40:34.914Z", "price": 249 }]
+  },
+  "Tefal-OptiGrill-XL-GC722834": {
+    "EMAG": [{ "date": "2022-10-09T19:40:35.610Z", "price": 345.0017 }],
+    "TECHNOMIX": [{ "date": "2022-10-09T19:40:37.173Z", "price": 469 }]
+  }
+}

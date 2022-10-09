@@ -13,12 +13,14 @@ export const updateDataFile = (data) => {
 }
 
 export const validateExistingData = (data) => {
-    if (Object.keys(data).length > 0) return;
-
     configuration.forEach(config => {
-        data[config.model] = {};
+        if (data[config.model] === undefined) {
+            data[config.model] = {};
+        }
         config.websites.forEach(web => {
-            data[config.model][web.key] = []
+            if (data[config.model][web.key] === undefined) {
+                data[config.model][web.key] = []
+            }
         })
     })
 }
