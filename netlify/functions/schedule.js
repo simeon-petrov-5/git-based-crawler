@@ -8,5 +8,4 @@ const handler = async function () {
         statusCode: 200,
     };
 };
-// To Do - change with 0 11 * * *
-exports.handler = schedule("*/20 * * * *", handler);
+exports.handler = schedule("0 11 * * *", handler);
