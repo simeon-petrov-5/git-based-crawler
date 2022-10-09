@@ -1,12 +1,27 @@
-# Nuxt 3 Minimal Starter
+# Git-based Crawler
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+![crawler-concept](./crawler-concept.png)
 
-## Setup
+This project is a proof-of-concept - create a simple crawler, that instead of using DBs (and trying to find a good free solution), uses a local JSON file to save its data. This static JSON file is used for generating a static website. The crawler is being called by a CRON job at a specific time everyday and when saving to the JSON we trigger the website to be re-build.
+
+## General workflow
+1) Have a local JSON file
+2) Node crawler gathers data and adds it to the JSON file
+3) Commit and push the changes via GitHub API
+4) Deploy your website on Netlify with CI/CD
+5) Pushing the data from the crawler triggers re-deployment from Netlify
+6) The website is re-generated with the new data from the JSON file
+7) Add a CRON job to trigger this every day
+
+
+## Test the project localy
+You will need Node to test this project. The crawler is based under `/crawler` and it's a simple setup of `axios` + `cheerio`. The front-end is a basic `Nuxt 3` project (I wanted to test how Nuxt 3 behaves for SSG).
+
+### Setup
 
 Make sure to install the dependencies:
 
-```bash
+```
 # yarn
 yarn install
 
@@ -17,26 +32,16 @@ npm install
 pnpm install --shamefully-hoist
 ```
 
-## Development Server
+### Development Server
 
 Start the development server on http://localhost:3000
-
-```bash
+```
 npm run dev
 ```
 
-## Production
+### Production
 
 Build the application for production:
-
-```bash
-npm run build
 ```
-
-Locally preview production build:
-
-```bash
-npm run preview
+npm run generate
 ```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
