@@ -17,6 +17,12 @@ This project is a proof-of-concept - create a simple crawler, that instead of us
 ## Test the project localy
 You will need Node to test this project. The crawler is based under `/crawler` and it's a simple setup of `axios` + `cheerio`. The front-end is a basic `Nuxt 3` project (I wanted to test how Nuxt 3 behaves for SSG).
 
+### ENV variables
+```
+GITHUB_TOKEN= - GitHub token to push changes to the repository
+NETLIFY_BUILD_HOOK - a hook to call the crawler deployed at Netlify
+```
+
 ### Setup
 
 Make sure to install the dependencies:
