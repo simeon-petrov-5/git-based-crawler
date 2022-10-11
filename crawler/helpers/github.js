@@ -10,9 +10,9 @@ const octokit = new Octokit({
 
 const getDataFileInfo = async () => {
     const content = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
-        owner: 'simeon-petrov-5',
-        repo: 'price-crawler',
-        path: 'data/index.json'
+        owner: process.env.GITHUB_OWNER,
+        repo: process.env.GITHUB_REPO,
+        path: process.env.GITHUB_FILE_PATH,
     })
 
     return content.data
@@ -26,13 +26,13 @@ const generateBase64Content = () => {
 
 const updateDataFile = async (dataFileInfo) => {
     await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
-        owner: 'simeon-petrov-5',
-        repo: 'price-crawler',
-        path: 'data/index.json',
-        message: 'Automatic update - new data added',
+        owner: process.env.GITHUB_OWNER,
+        repo: process.env.GITHUB_REPO,
+        path: process.env.GITHUB_FILE_PATH,
+        message: 'chore(cron): New data saved from crawler',
         committer: {
             name: 'Monalisa Octocat',
-            email: 'petrov.v.simeon@gmail.com'
+            email: process.env.GITHUB_COMMITTER_EMAIL,
         },
         content: generateBase64Content(),
         sha: dataFileInfo.sha

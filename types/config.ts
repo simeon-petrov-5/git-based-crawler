@@ -6,7 +6,7 @@ export interface ConfigWebsite {
 
 export interface ConfigEntry {
   model: string;
-  website: ConfigWebsite[];
+  websites: ConfigWebsite[];
 }
 
 export interface Config {

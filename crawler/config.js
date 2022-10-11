@@ -5,6 +5,13 @@ export const WEBSITE = {
   EMAG: "EMAG"
 }
 
+export const WEBSITE_COLORS = {
+  [WEBSITE.TECHNOPOLIS]: '#db232a',
+  [WEBSITE.TECHNOMIX]: '#333',
+  [WEBSITE.TECHMART]: '#ffa906',
+  [WEBSITE.EMAG]: "#4359c7"
+}
+
 export const HTMLSelectors = {
   [WEBSITE.TECHNOPOLIS]: '.product-block .product-price .price .price-value',
   [WEBSITE.TECHNOMIX]: '.product-info-price .price-final_price span[data-price-type="finalPrice"] .price',

@@ -39,4 +39,6 @@ for await (const config of configuration) {
 }
 
 updateDataFile(data);
-await commitAndPush();
+if (process.env.CRAWLER_MODE === 'production') {
+  await commitAndPush();
+}
